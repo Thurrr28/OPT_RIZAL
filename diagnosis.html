@@ -28,7 +28,7 @@
             </nav>
         </div>
     </header>
-    <section class="showcase bg-cover bg-center text-white text-center py-20" style="background-image: url('https://storage.googleapis.com/a1aa/image/6ci36YfmNcwVE6J4l7K9c4ajE2U44GeFTfX4oRfMRubVIvAPB.jpg');">
+    <section class="showcase bg-cover bg-center text-white text-center py-20" style="background-image: url('https://placehold.co/1920x1080');">
         <div class="container mx-auto">
             <h1 class="text-5xl font-bold">Diagnosa Penyakit dan Hama pada Tanaman Sawit</h1>
             <p class="text-xl mt-4">Informasi lengkap mengenai penyakit dan hama yang menyerang tanaman sawit serta cara penanganannya.</p>
@@ -81,12 +81,46 @@
             const severity = document.getElementById('severity').value;
             let diagnosisResult = '';
 
-            if (symptom === 'gejala1' && severity === 'low') {
-                diagnosisResult = 'Penyakit: Kekurangan Nitrogen. Penanganan: Berikan pupuk yang mengandung nitrogen.';
-            } else if (symptom === 'gejala2' && severity === 'high') {
-                diagnosisResult = 'Penyakit: Busuk Batang. Penanganan: Potong bagian yang terinfeksi dan gunakan fungisida.';
-            } else if (symptom === 'gejala3' && severity === 'medium') {
-                diagnosisResult = 'Penyakit: Busuk Kuncup. Penanganan: Gunakan fungisida dan pastikan drainase yang baik.';
+            if (symptom === 'gejala1') {
+                if (severity === 'low') {
+                    diagnosisResult = 'Penyakit: Kekurangan Nitrogen. Penanganan: Berikan pupuk yang mengandung nitrogen.';
+                } else if (severity === 'medium') {
+                    diagnosisResult = 'Penyakit: Kekurangan Magnesium. Penanganan: Berikan pupuk yang mengandung magnesium.';
+                } else if (severity === 'high') {
+                    diagnosisResult = 'Penyakit: Kekurangan Kalium. Penanganan: Berikan pupuk yang mengandung kalium.';
+                }
+            } else if (symptom === 'gejala2') {
+                if (severity === 'low') {
+                    diagnosisResult = 'Penyakit: Busuk Batang Awal. Penanganan: Potong bagian yang terinfeksi dan gunakan fungisida.';
+                } else if (severity === 'medium') {
+                    diagnosisResult = 'Penyakit: Busuk Batang Menengah. Penanganan: Potong bagian yang terinfeksi dan gunakan fungisida lebih sering.';
+                } else if (severity === 'high') {
+                    diagnosisResult = 'Penyakit: Busuk Batang Parah. Penanganan: Potong bagian yang terinfeksi, gunakan fungisida, dan perbaiki drainase.';
+                }
+            } else if (symptom === 'gejala3') {
+                if (severity === 'low') {
+                    diagnosisResult = 'Penyakit: Busuk Kuncup Awal. Penanganan: Gunakan fungisida dan pastikan drainase yang baik.';
+                } else if (severity === 'medium') {
+                    diagnosisResult = 'Penyakit: Busuk Kuncup Menengah. Penanganan: Gunakan fungisida lebih sering dan pastikan drainase yang baik.';
+                } else if (severity === 'high') {
+                    diagnosisResult = 'Penyakit: Busuk Kuncup Parah. Penanganan: Gunakan fungisida, pastikan drainase yang baik, dan potong bagian yang terinfeksi.';
+                }
+            } else if (symptom === 'gejala4') {
+                diagnosisResult = 'Penyakit: Bercak Daun. Penanganan: Gunakan fungisida dan pastikan tanaman mendapatkan cukup sinar matahari.';
+            } else if (symptom === 'gejala5') {
+                diagnosisResult = 'Penyakit: Bercak Cokelat. Penanganan: Gunakan fungisida dan pastikan tanaman mendapatkan cukup sinar matahari.';
+            } else if (symptom === 'gejala6') {
+                diagnosisResult = 'Penyakit: Fusarium. Penanganan: Gunakan fungisida dan pastikan drainase yang baik.';
+            } else if (symptom === 'gejala7') {
+                diagnosisResult = 'Penyakit: Karat Daun. Penanganan: Gunakan fungisida dan pastikan tanaman mendapatkan cukup sinar matahari.';
+            } else if (symptom === 'gejala8') {
+                diagnosisResult = 'Penyakit: Layu Fusarium. Penanganan: Gunakan fungisida dan pastikan drainase yang baik.';
+            } else if (symptom === 'gejala9') {
+                diagnosisResult = 'Penyakit: Busuk Pangkal Batang. Penanganan: Potong bagian yang terinfeksi dan gunakan fungisida.';
+            } else if (symptom === 'gejala10') {
+                diagnosisResult = 'Hama: Kumbang Tanduk. Penanganan: Gunakan insektisida dan potong bagian yang terinfeksi.';
+            } else if (symptom === 'gejala11') {
+                diagnosisResult = 'Hama: Ulat Grayak. Penanganan: Gunakan insektisida dan potong bagian yang terinfeksi.';
             } else {
                 diagnosisResult = 'Gejala tidak dikenali atau kombinasi gejala dan tingkat keparahan tidak ada dalam database.';
             }
